@@ -1,7 +1,8 @@
 
 const Die = (props) => {
     const styles = {
-            backgroundColor: props.isHeld ? "#B3FDA4" : "white"
+            backgroundColor: props.isHeld ? "#B3FDA4" : "white",
+            color: props.isHeld ? "white" : "#232946"
         }
 
     return (
