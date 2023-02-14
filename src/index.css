@@ -63,6 +63,10 @@ main {
   font-size: 2rem;
 }
 
+.accent {
+  color: #B3FDA4;
+}
+
 .roll-dice {
   height: 50px;
   width: 150px;
@@ -92,9 +96,21 @@ main {
 }
 
 @keyframes slideLeft {
-  0%{transform: translateX(250px)}
-  25%{transform: translateX(-150px)}
-  50%{transform: translateX(150px)}
-  75%{transform: translateX(-150px)}
+  0%{transform: translateX(150px)}
+  50%{transform: translateX(-150px)}
   100%{transform: translateX(0)}
+}
+
+/*MOBILE ANIMATION*/
+
+@media(max-width: 450px) {
+  .dice-container{
+    animation-name: mobileSlideLeft;
+  }
+
+  @keyframes mobileSlideLeft{
+      0% {transform: translateX(25px)}
+      50% {transform: translateX(-25px)}
+      100% {transform: translateX(0)}
+  }
 }

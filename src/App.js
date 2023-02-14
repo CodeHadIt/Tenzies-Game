@@ -111,8 +111,8 @@ function App() {
             >
                 {tenzies ? "New Game" : "Roll"}
             </button>
-            {tenzies && <h2>Yaay🥳! congratulations. It took you {rolls} rolls to victory!</h2>}
-            {tenzies && <h3>It took you {timeElapsed} seconds to complete the game.</h3>}
+            {tenzies && <h2>Yaay🥳! congratulations. It took you <span className='accent'>{`${rolls} rolls`}</span> to victory!</h2>}
+            {tenzies && <h2>And <span className='accent'>{`${timeElapsed} seconds`}</span> to complete the game.</h2>}
         </main>
     )
 }
