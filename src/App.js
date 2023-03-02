@@ -5,7 +5,7 @@ import Confetti from "react-confetti"
 import './App.css';
 
 
-//When interracts with the game fir the first time, the highScore Array is empty. On subsequent interractions the array will be the array of times stored in local Storage.
+//When user interracts with the game for the first time, the highScore Array is empty. On subsequent interractions, the array will be the array of "times" stored in local Storage.
 let highScoreArray = JSON.parse(localStorage.getItem('time')) || []
 
 function App() {
@@ -16,8 +16,6 @@ function App() {
     const [firstClick, setFirstClick] = useState(true);
     const [startTime, setStartTime] = useState(0);
     const [timeElapsed, setTimeElapsed] = useState(0);
-
-
     const [highScore, setHighScore] = useState(0)
         
     //checks if we hold every single die and if the value of a die is equal to the value of the other dice. If so, we set tenzies to true(meaning the game has ended)
@@ -90,7 +88,6 @@ function App() {
         
         //handles the holding of each die by flipping its isHeld property to true.
     function HoldDice (id) {
-
         if(firstClick) {
         setDice(oldDice => oldDice.map(die => {
                 return die.id === id ? 
